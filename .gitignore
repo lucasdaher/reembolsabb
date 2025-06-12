@@ -2,5 +2,9 @@
 server/.env
 client/.env
 
+# Node Modules e Outros
 client/node_modules
 client/.next
+
+node_modules/
+.next/
