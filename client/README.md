@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ReembolsaBB - Front
 
-## Getting Started
+O front-end do ReembolsaBB é uma aplicação web moderna construída com Next.js e TypeScript. Ele oferece uma interface de usuário para upload de comprovantes de despesas e visualização dos resultados da análise de reembolso.
 
-First, run the development server:
+## Tecnologias Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Framework: Next.js 15.3.3
+- Linguagem: TypeScript
+- Estilização: Tailwind CSS
+- Componentes UI: shadcn/ui, Radix UI
+- Requisições HTTP: Axios
+
+## Pré-requisitos
+
+- Node.js (versão 20 ou superior recomendada)
+- Yarn (gerenciador de pacotes)
+
+## Estrutura de Arquivos Relevantes
+
+```
+/client
+|-- /src
+|   |-- /app
+|   |   |-- /teste                # Página de teste para upload de arquivos
+|   |   |-- globals.css           # Estilos globais e importação de fontes
+|   |   |-- layout.tsx            # Layout principal da aplicação
+|   |   |-- page.tsx              # Página inicial da aplicação
+|   |-- /components
+|   |   |-- /ui                   # Componentes da interface do usuário (ex: Button, Dialog)
+|   |-- /lib
+|   |   |-- utils.ts              # Funções utilitárias
+|-- package.json                  # Dependências e scripts do projeto
+|-- next.config.ts                # Arquivo de configuração do Next.js
+|-- tailwind.config.ts            # Arquivo de configuração do Tailwind CSS
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Como Executar no Projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Navegue até o diretório do cliente:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+cd client
+```
 
-## Learn More
+2. Instale as dependências:
 
-To learn more about Next.js, take a look at the following resources:
+O projeto utiliza `Yarn` como gerenciador de pacotes. Para instalar as dependências, execute:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+yarn install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Inicie o servidor de desenvolvimento:
 
-## Deploy on Vercel
+Após a instalação das dependências, inicie a aplicação com o seguinte comando:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+yarn dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Acesse a aplicação:
+
+Abra seu navegador e acesse http://localhost:3000 para ver a aplicação em funcionamento. A página principal (/) contém a interface de upload de arquivos.
