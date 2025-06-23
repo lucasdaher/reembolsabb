@@ -1,0 +1,34 @@
+Comece com a Google Vision AI: Um Guia Simples
+Este tutorial fornece um guia direto para configurar e usar o serviço Vision AI do Google, uma ferramenta poderosa que permite entender o conteúdo de suas imagens. Vamos percorrer o processo de configuração na Google Cloud Platform e demonstrar como usar a API Vision com um script Python simples para detecção de texto em uma imagem.
+
+Parte 1: Configurando Seu Projeto na Google Cloud
+Antes de poder usar a Google Vision AI, você precisa configurar um projeto na Google Cloud Platform e habilitar as APIs necessárias.
+
+1. Crie um Projeto na Google Cloud:
+
+Acesse o Google Cloud Console.
+Se você não tiver um projeto, clique no seletor de projetos na parte superior da página e, em seguida, clique em "Novo Projeto".
+Dê um nome ao seu projeto e clique em "Criar".
+2. Habilite o Faturamento:
+
+A Vision AI é um serviço pago, mas o Google oferece um generoso nível de uso gratuito. Você ainda precisará habilitar o faturamento para o seu projeto.
+No Cloud Console, navegue até a seção "Faturamento" (Billing) no menu à esquerda.
+Selecione seu projeto e siga as instruções para vincular uma conta de faturamento.
+3. Habilite a Cloud Vision API:
+
+No Cloud Console, use a barra de pesquisa na parte superior para procurar por "Cloud Vision API".
+Clique no resultado "Cloud Vision API" na seção "Marketplace".
+Clique no botão "Ativar" (Enable). Isso pode levar alguns instantes.
+4. Crie uma Conta de Serviço e Obtenha Suas Credenciais:
+
+Uma conta de serviço (service account) é um tipo especial de conta do Google que uma aplicação pode usar para fazer chamadas de API autorizadas.
+No Cloud Console, navegue para "IAM e Admin" > "Contas de serviço" (Service Accounts).
+Clique em "+ Criar Conta de Serviço".
+Dê um nome à sua conta de serviço (por exemplo, "vision-api-user") e uma breve descrição. Clique em "Criar e Continuar".
+Para permissões, conceda à sua conta de serviço o papel "Usuário da API Cloud Vision" (Cloud Vision API User) para permitir que ela acesse a API Vision. Clique em "Continuar".
+Você pode pular a seção "Conceder a usuários acesso a esta conta de serviço" por enquanto e clicar em "Concluído".
+Agora, você precisa criar uma chave para sua conta de serviço. Encontre a conta de serviço que você acabou de criar na lista, clique no menu de três pontos em "Ações" e selecione "Gerenciar chaves" (Manage keys).
+Clique em "Adicionar Chave" (Add Key) e depois em "Criar nova chave" (Create new key).
+Escolha "JSON" como o tipo de chave e clique em "Criar". Um arquivo JSON contendo suas credenciais será baixado para o seu computador. Mantenha este arquivo seguro, pois ele fornece acesso ao seu projeto do Google Cloud.
+
+Este JSON acima deve ser inserido nas variáveis de ambiente citadas nos README de cada side da aplicação.
